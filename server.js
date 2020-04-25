@@ -2,7 +2,7 @@ const express = require('express');
 const db = require('./server/models/db');
 var cors = require('cors');
 const app = express();
-const PORT = process.env.PORT || 3000; 
+const port = process.env.PORT || 3000; 
 const seed = require('./server/models/seed/seed-bd');
 
 // setup the Express middleware
@@ -22,8 +22,8 @@ db.sequelize.sync({
  // 	seed.insertingMaintenanceData(); 		
  // })
 
-.then(() => {
+// .then(() => {
 	app.listen(port, () => { 
     console.log('Running server on port ' + port);
   });	
-});
+// });
