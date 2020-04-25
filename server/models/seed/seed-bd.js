@@ -34,10 +34,10 @@ const _REPAIR = require('./transport/repairs.json');
 const _REPAIR_DETAIL = require('./transport/repairs-details.json');
 
 function insertingMaintenanceData() {
-	models.General_Configuration.bulkCreate(_GENERAL_CONFIGURATION)
-	models.Department.bulkCreate(_DEPARTMENTS)
-	models.Job_Position.bulkCreate(_JOB_POSITIONS)
-	models.Warehouse.bulkCreate(_WAREHOUSES)
+	// models.General_Configuration.bulkCreate(_GENERAL_CONFIGURATION)
+	// models.Department.bulkCreate(_DEPARTMENTS)
+	// models.Job_Position.bulkCreate(_JOB_POSITIONS)
+	// models.Warehouse.bulkCreate(_WAREHOUSES)
 	models.Employee.bulkCreate(_EMPLOYEES)
 	models.Rol.bulkCreate(_ROLS)
 	// models.User.bulkCreate(_USERS) 
@@ -53,39 +53,39 @@ function insertingMaintenanceData() {
 			users.setRols([1]);
 		})
 	})
-	.then(() => {
-		models.Customer.bulkCreate(_CUSTOMERS)
-		.catch(error => {
-			console.log('ERROR SALES DATA ADDING' + '<br/>' + error);
-		})	
-	})
-	.then(() => {
-		models.Brand.bulkCreate(_BRANDS)
-		models.Load_Index.bulkCreate(_LOAD_INDEXES)
-		models.Speed_Rating.bulkCreate(_SPEED_RATINGS)
-		models.Product.bulkCreate(_PRODUCTS)
-		models.Rack.bulkCreate(_RACKS)
-		models.Position.bulkCreate(_POSITIONS)
-		models.Level.bulkCreate(_LEVELS)
-		models.Ubication.bulkCreate(_UBICATIONS)
-		models.Type_Document.bulkCreate(_TYPE_DOCUMENTS)
-		.catch(error => {
-			console.log('ERROR INVENTORY DATA ADDING' + '<br/>' + error);
-		})	
-	})
-	.then(() => {
-		models.Vehicle.bulkCreate(_VEHICLES)
-		models.Reservation.bulkCreate(_RESERVATIONS)
-		models.Oil.bulkCreate(_OILS)
-		models.Repair.bulkCreate(_REPAIR)
-		models.Repair_Detail.bulkCreate(_REPAIR_DETAIL)
-		.catch(error => {
-			console.log('ERROR TRANSPORT DATA ADDING' + '<br/>' + error);
-		})	
-	})
-	.catch(error => {
-		console.log('ERROR ADMIN DATA ADDING' + '<br/>' + error);
-	})					
+// 	.then(() => {
+// 		models.Customer.bulkCreate(_CUSTOMERS)
+// 		.catch(error => {
+// 			console.log('ERROR SALES DATA ADDING' + '<br/>' + error);
+// 		})	
+// 	})
+// 	.then(() => {
+// 		models.Brand.bulkCreate(_BRANDS)
+// 		models.Load_Index.bulkCreate(_LOAD_INDEXES)
+// 		models.Speed_Rating.bulkCreate(_SPEED_RATINGS)
+// 		models.Product.bulkCreate(_PRODUCTS)
+// 		models.Rack.bulkCreate(_RACKS)
+// 		models.Position.bulkCreate(_POSITIONS)
+// 		models.Level.bulkCreate(_LEVELS)
+// 		models.Ubication.bulkCreate(_UBICATIONS)
+// 		models.Type_Document.bulkCreate(_TYPE_DOCUMENTS)
+// 		.catch(error => {
+// 			console.log('ERROR INVENTORY DATA ADDING' + '<br/>' + error);
+// 		})	
+// 	})
+// 	.then(() => {
+// 		models.Vehicle.bulkCreate(_VEHICLES)
+// 		models.Reservation.bulkCreate(_RESERVATIONS)
+// 		models.Oil.bulkCreate(_OILS)
+// 		models.Repair.bulkCreate(_REPAIR)
+// 		models.Repair_Detail.bulkCreate(_REPAIR_DETAIL)
+// 		.catch(error => {
+// 			console.log('ERROR TRANSPORT DATA ADDING' + '<br/>' + error);
+// 		})	
+// 	})
+// 	.catch(error => {
+// 		console.log('ERROR ADMIN DATA ADDING' + '<br/>' + error);
+// 	})					
 }
 
 module.exports = {
