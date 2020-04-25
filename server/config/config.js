@@ -8,9 +8,9 @@ module.exports = {
     //storage: ":memory:"
   },
   production: {
-    username: 'bf0cdbc65b64d9',
-    password: 'a4d5d4f1',
-    database: 'heroku_7dda55d9c07116c',
+    username: 'bacd2602f8524e',
+    password: '4376ff1b',
+    database: 'heroku_5a536846eec525b',
     host: 'us-cdbr-iron-east-01.cleardb.net',
     dialect: 'mysql',
     use_env_variable: false
