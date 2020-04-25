@@ -18,9 +18,9 @@ db.sequelize.sync({
 	force: true
 })
 
- .then(() => {
- 	seed.insertingMaintenanceData(); 		
- })
+ // .then(() => {
+ // 	seed.insertingMaintenanceData(); 		
+ // })
 
 .then(() => {
 	app.listen(port, () => { 

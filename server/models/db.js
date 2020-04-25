@@ -11,9 +11,9 @@ var db        = {};
 const sequelize = new Sequelize('heroku_5a536846eec525b', 'bacd2602f8524e', '4376ff1b', {
   host: 'us-cdbr-iron-east-01.cleardb.net',
   dialect: 'mysql',
-  define:{
-    freezeTableName: true // Model Name == Table Name
-  },
+  // define:{
+  //   freezeTableName: true // Model Name == Table Name
+  // },
 
 // const sequelize = new Sequelize('emotion', 'gamboa', '1234', {
 //   host: 'localhost',
