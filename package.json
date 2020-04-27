@@ -4,7 +4,7 @@
   "description": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run build && node server.js"
+    "start": "node server.js"
   },
   "engines": {
     "node": "12.16.2",

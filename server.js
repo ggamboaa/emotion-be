@@ -22,8 +22,8 @@ db.sequelize.sync({
  	seed.insertingMaintenanceData(); 		
  })
 
-// .then(() => {
+.then(() => {
 	app.listen(port, () => { 
     console.log('Running server on port ' + port);
   });	
-// });
+});

@@ -35,24 +35,24 @@ const _REPAIR_DETAIL = require('./transport/repairs-details.json');
 
 function insertingMaintenanceData() {
 	// models.General_Configuration.bulkCreate(_GENERAL_CONFIGURATION)
-	// models.Department.bulkCreate(_DEPARTMENTS)
-	// models.Job_Position.bulkCreate(_JOB_POSITIONS)
+	models.Department.bulkCreate(_DEPARTMENTS)
+	models.Job_Position.bulkCreate(_JOB_POSITIONS)
 	// models.Warehouse.bulkCreate(_WAREHOUSES)
 	models.Employee.bulkCreate(_EMPLOYEES)
 	models.Rol.bulkCreate(_ROLS)
 	// models.User.bulkCreate(_USERS) 
-	.then(() => {
-		models.User.create({
-			user: 'admin',
-			email: 'admin@admin.com',
-			password: '1234',
-			status: true,
-			employeeId: 1
-		})
-		.then((users) => {
-			users.setRols([1]);
-		})
-	})
+	// .then(() => {
+	// 	models.User.create({
+	// 		user: 'admin',
+	// 		email: 'admin@admin.com',
+	// 		password: '1234',
+	// 		status: true,
+	// 		employeeId: 1
+	// 	})
+		// .then((users) => {
+		// 	users.setRols([1]);
+		// })
+	// })
 // 	.then(() => {
 // 		models.Customer.bulkCreate(_CUSTOMERS)
 // 		.catch(error => {
